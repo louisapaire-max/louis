@@ -1,0 +1,42 @@
+/* Variables CSS globales - Thème Mariage Intemporel & Premium */
+:root {
+  /* Palette Chromatique Sophistiquée */
+  --primary-color: #1a1a1a;    /* Noir de fumée */
+  --secondary-color: #4a4a4a;  /* Gris anthracite */
+  --accent-color: #c5a059;     /* Or sourd */
+  
+  --text-dark: #1a1a1a;
+  --text-medium: #4a4a4a;
+  --text-light: #8e8e8e;
+  
+  --white: #ffffff;
+  --bg-light: #f7f6f2; /* Stone / Off-white premium */
+  --bg-card: #ffffff;
+  
+  --border-color: #e5e3de;
+  --border-soft: rgba(197, 160, 89, 0.15); /* Basé sur l'or */
+  
+  /* Palette Signature - Moins Rose, Plus Neutre */
+  --gold: #c5a059;
+  --gold-light: #eaddca;
+  --champagne: #f2e9d9;
+  --stone: #d9d4cc;
+  --taupe: #a69f92;
+  
+  /* Suppression du rose dominant au profit de l'or et des tons neutres */
+  --rose-gold: var(--taupe); /* On remplace le rose gold par du taupe par défaut */
+  --rose-gold-light: var(--stone);
+  --rose-light: #fcfbf9;
+  
+  /* Ombres Portées Architecturaux */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.06);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+  
+  /* Transitions et Rythme */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --border-radius: 4px; /* Bords plus droits pour un look plus pro/architectural */
+  --container-width: 1050px;
+}

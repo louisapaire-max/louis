@@ -1,0 +1,61 @@
+/* Section Divider - Le Détail Qui Fait La Différence */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: transparent;
+}
+
+.divider-line {
+  flex: 0 0 100px;
+  height: 1px;
+  background: var(--gold-light);
+  opacity: 0.4;
+}
+
+.divider-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  color: var(--gold);
+  position: relative;
+  transition: var(--transition);
+}
+
+.divider-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: var(--transition);
+}
+
+.section-divider:hover .divider-icon {
+  transform: rotate(45deg);
+  color: var(--rose-gold);
+}
+
+.section-divider:hover .divider-icon::before {
+  border-color: var(--rose-gold);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.divider-icon svg {
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-divider {
+    padding: 3rem 0;
+  }
+}

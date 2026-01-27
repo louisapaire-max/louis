@@ -1,0 +1,193 @@
+/* Program Section - Raffinement et Clarté */
+.program {
+  padding: 5rem 2rem;
+  background: var(--white);
+  position: relative;
+}
+
+/* Texture de fond très subtile */
+.program::before {
+  content: '♥';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40rem;
+  color: var(--rose-light);
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.program-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.program-intro {
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.program-timeline {
+  position: relative;
+}
+
+/* La ligne verticale centrale */
+.program-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold-light), var(--gold-light), transparent);
+  transform: translateX(-50%);
+}
+
+.program-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 100%;
+}
+
+.program-item:last-child {
+  margin-bottom: 0;
+}
+
+.program-content {
+  width: 45%;
+  padding: 2.5rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+}
+
+/* Placement alterné à gauche/droite */
+.program-item:nth-child(odd) .program-content {
+  margin-right: auto;
+  text-align: right;
+}
+
+.program-item:nth-child(even) .program-content {
+  margin-left: auto;
+  text-align: left;
+}
+
+.program-content:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-light);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.program-time-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-light);
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.program-time {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 2px solid var(--gold-light);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.program-item:hover .program-time {
+  background: var(--rose-gold);
+  border-color: var(--rose-gold);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.program-content h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.program-location {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--rose-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.program-description {
+  font-family: 'Lora', serif;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .program-timeline::before {
+    left: 40px;
+  }
+
+  .program-time-wrapper {
+    left: 40px;
+  }
+
+  .program-content {
+    width: calc(100% - 100px);
+    margin-left: 100px !important;
+    text-align: left !important;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-time {
+    width: 60px;
+    height: 60px;
+    font-size: 0.8rem;
+  }
+}

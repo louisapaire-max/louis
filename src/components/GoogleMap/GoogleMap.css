@@ -1,0 +1,285 @@
+/* GoogleMap Section - Design Invitation de Luxe */
+.google-map {
+  padding: 5rem 2rem;
+  background-color: var(--bg-light);
+  /* Trame de fond discrète */
+  background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 100px 100px;
+  background-position: center;
+  position: relative;
+}
+
+.google-map::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent, var(--bg-light));
+  pointer-events: none;
+}
+
+.map-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.location-section {
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+}
+
+.location-section:last-child {
+  margin-bottom: 0;
+}
+
+.location-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* En-tête de section plus aéré */
+.location-header {
+  padding: 3rem 3rem 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.location-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--gold-light);
+}
+
+.location-icon-circle {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 2rem;
+  background: var(--bg-light);
+  color: var(--gold);
+  border: 1px solid var(--gold-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.location-card:hover .location-icon-circle {
+  background: var(--rose-gold);
+  border-color: var(--rose-gold);
+  color: var(--white);
+  transform: translateY(-5px);
+}
+
+.location-label {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.location-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.location-address {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.location-time {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Contenu vertical raffiné */
+.location-content-vertical {
+  padding: 4rem 3rem;
+}
+
+.location-photo-box {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 4rem;
+}
+
+.location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.location-card:hover .location-image {
+  transform: scale(1.05);
+}
+
+/* Séparateur élégant */
+.mini-separator {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-separator span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--gold);
+  background: var(--white);
+  padding: 0 2rem;
+}
+
+.location-map-box {
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-inner);
+  margin-bottom: 4rem;
+  filter: grayscale(0.2); /* Plus classe */
+  transition: var(--transition);
+}
+
+.location-map-box:hover {
+  filter: grayscale(0);
+}
+
+/* Bloc Parking - Design "Conciergerie" */
+.parking-info {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  margin-top: 4rem;
+  border-left: 3px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.parking-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+}
+
+.parking-name {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.parking-address {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.parking-actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.parking-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.8rem;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  color: var(--text-dark);
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-family: 'Lora', serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.parking-link:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Footer & Boutons */
+.location-footer {
+  padding: 4rem 3rem;
+  text-align: center;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 1.1rem 2.5rem;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  background: var(--white);
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.btn-outline:hover {
+  background: var(--text-dark);
+  color: var(--white);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .location-name { font-size: 3rem; }
+  .location-header { padding: 4rem 2rem; }
+  .location-content-vertical { padding: 3rem 2rem; }
+  
+  .btn-outline {
+    width: 100%;
+  }
+}

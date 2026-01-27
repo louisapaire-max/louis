@@ -1,0 +1,46 @@
+/* Footer - Design Élégant et Léger */
+.footer {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+}
+
+/* Petit motif décoratif */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50px;
+  background: var(--gold-light);
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--text-medium);
+}
+
+.footer-content p:last-child {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: var(--rose-gold);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 2rem;
+  font-style: normal;
+  opacity: 1;
+}

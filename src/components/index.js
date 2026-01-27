@@ -1,0 +1,13 @@
+// Exports centralisés des composants
+export { default as Header } from './Header/Header'
+export { default as Hero } from './Hero/Hero'
+export { default as Countdown } from './Countdown/Countdown'
+export { default as SectionDivider } from './SectionDivider/SectionDivider'
+export { default as Program } from './Program/Program'
+export { default as GoogleMap } from './GoogleMap/GoogleMap'
+export { default as ImageSlider } from './ImageSlider/ImageSlider'
+export { default as RSVPSection } from './RSVPSection/RSVPSection'
+export { default as FAQ } from './FAQ/FAQ'
+export { default as Weather } from './Weather/Weather'
+export { default as Footer } from './Footer/Footer'
+export { default as ScrollToTop } from './ScrollToTop/ScrollToTop'

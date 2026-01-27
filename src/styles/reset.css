@@ -1,0 +1,63 @@
+/* Reset et Fondations Typographiques */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lora', 'Georgia', serif;
+  line-height: 1.8;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-accent {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility Classes for Design */
+.section-padding {
+  padding: 8rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 5rem 1.5rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}

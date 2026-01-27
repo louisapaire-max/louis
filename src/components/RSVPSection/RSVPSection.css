@@ -1,0 +1,77 @@
+/* RSVP Section - Design Épuré et Intuitif */
+.rsvp {
+  padding: 5rem 2rem;
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+.rsvp-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rsvp-description {
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin-bottom: 3rem;
+  line-height: 2;
+  font-style: italic;
+}
+
+.rsvp-form-container {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.rsvp-form-container:hover {
+  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+}
+
+.rsvp-iframe {
+  border-radius: 4px;
+  min-height: 850px;
+  /* Masquer le fond gris par défaut du form si possible */
+}
+
+.rsvp-alternative {
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--text-light);
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.rsvp-alternative a {
+  color: var(--rose-gold);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+
+.rsvp-alternative a:hover {
+  border-bottom-color: var(--rose-gold);
+  color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rsvp {
+    padding: 4rem 1.5rem;
+  }
+  
+  .rsvp-iframe {
+    min-height: 600px;
+  }
+  
+  .rsvp-description {
+    margin-bottom: 3rem;
+  }
+}

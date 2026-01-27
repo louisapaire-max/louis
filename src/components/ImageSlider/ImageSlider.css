@@ -1,0 +1,82 @@
+/* Image Slider - Défilement continu élégant */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Utilise toute la hauteur du parent (location-photo-box) */
+  overflow: hidden;
+  border-radius: 0;
+  margin: 0;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.slider-slide {
+  flex: 0 0 100%; /* Fixe la largeur de chaque slide à 100% du conteneur */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease-out;
+}
+
+.slider-slide:hover .slider-image {
+  transform: scale(1.03);
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.slider-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.slider-dot.active {
+  background: var(--white);
+  transform: scale(1.1);
+  border-color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-dots {
+    bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,169 @@
+/* Weather Section - Raffinement et Analyse Météorologique */
+.weather {
+  padding: 5rem 2rem;
+  background-color: var(--white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.weather-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.weather-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Résumé phrase - Mise en avant */
+.weather-summary {
+  background: var(--bg-light);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--rose-light);
+  text-align: center;
+  margin-bottom: 4rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.weather-summary::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  color: var(--rose-gold-light);
+  opacity: 0.3;
+}
+
+.summary-text {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  line-height: 2;
+  color: var(--text-medium);
+  margin: 0;
+  font-style: italic;
+}
+
+.summary-text strong {
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+/* Historique Grid - Design Minimaliste */
+.weather-history {
+  margin-bottom: 4rem;
+}
+
+.history-title {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.history-card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.history-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-md);
+}
+
+.history-year {
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.history-icon {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-lucide-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--gold);
+}
+
+.history-temp {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  font-family: 'Lora', serif;
+  margin-bottom: 0.5rem;
+}
+
+.history-desc {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.weather-note {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 3rem;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .weather-summary {
+    padding: 2rem;
+  }
+  
+  .summary-text {
+    font-size: 1.1rem;
+  }
+
+  .weather-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+}
