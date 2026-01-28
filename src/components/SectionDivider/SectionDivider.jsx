@@ -1,5 +1,4 @@
 import React from 'react'
-import { Heart } from 'lucide-react'
 import './SectionDivider.css'
 
 function SectionDivider() {
@@ -7,7 +6,7 @@ function SectionDivider() {
     <div className="section-divider">
       <div className="divider-line"></div>
       <div className="divider-icon">
-        <Heart size={18} strokeWidth={1} />
+        <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'currentColor', opacity: 0.5 }} />
       </div>
       <div className="divider-line"></div>
     </div>

@@ -1,18 +1,18 @@
-import React from 'react'
-import { MapPin, Utensils, ParkingSquare, ExternalLink, Navigation } from 'lucide-react'
-import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import React, { useState } from 'react'
+import { MapPin, Utensils, ParkingSquare, Navigation, Map, X } from 'lucide-react'
 import ImageSlider from '../ImageSlider/ImageSlider'
 import './GoogleMap.css'
 
 function GoogleMap() {
-  const mairieClichyUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.6599483904115!2d2.302299275062527!3d48.90281749758091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f0c98bdd535%3A0x7ea52a513742d02a!2sMairie%20de%20Clichy-la-Garenne!5e0!3m2!1sfr!2sfr!4v1769463904994!5m2!1sfr!2sfr"
+  // URLs d'intégration simplifiées et robustes
+  const mairieClichyUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.6599483904115!2d2.302299275062527!3d48.90281749758091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f0c98bdd535%3A0x7ea52a513742d02a!2sMairie%20de%20Clichy!5e0!3m2!1sfr!2sfr!4v1738097500000!5m2!1sfr!2sfr"
   
-  const splashRestaurantUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10488.928258819684!2d2.281526119560271!3d48.91097073083702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f34e9679a01%3A0xc9224b4c63dd22b9!2sChez%20Monix%20au%20Splash!5e0!3m2!1sfr!2sfr!4v1769463966751!5m2!1sfr!2sfr"
+  const splashRestaurantUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.4411135431627!2d2.288258676233157!3d48.91146717133989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f34e9679a01%3A0xc9224b4c63dd22b9!2sSplash!5e0!3m2!1sfr!2sfr!4v1738097500000!5m2!1sfr!2sfr"
 
-  const [ref, isVisible] = useScrollAnimation({ threshold: 0.05 })
+  const [lightboxOpen, setLightboxOpen] = useState(false)
 
   return (
-    <section ref={ref} id="lieux" className={`google-map scroll-section ${isVisible ? 'scroll-visible' : ''}`}>
+    <section id="lieux" className="google-map">
       <div className="map-container">
         <h2 className="section-title">Les lieux de la journée</h2>
         
@@ -30,7 +30,15 @@ function GoogleMap() {
             </div>
 
             <div className="location-content-vertical">
-              <div className="location-photo-box">
+              <div 
+                className="location-photo-box"
+                onClick={() => setLightboxOpen(true)}
+                style={{ cursor: 'pointer' }}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && setLightboxOpen(true)}
+                aria-label="Agrandir l'image"
+              >
                 <img src="/mairie-clichy.jpg" alt="Mairie de Clichy" className="location-image" />
               </div>
 
@@ -47,10 +55,11 @@ function GoogleMap() {
                   allowFullScreen=""
                   loading="lazy"
                   title="Mairie de Clichy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
 
-              {/* Nouveau Bloc Parking Mairie */}
+              {/* Bloc Parking Mairie */}
               <div className="parking-info">
                 <div className="parking-header">
                   <ParkingSquare size={20} />
@@ -60,11 +69,11 @@ function GoogleMap() {
                 <p className="parking-address">80 Boulevard Jean Jaurès, 92110 Clichy</p>
                 <div className="parking-actions">
                   <a href="https://www.google.com/maps/search/Parking+Indigo+Clichy+H%C3%B4tel+de+Ville" target="_blank" rel="noopener noreferrer" className="parking-link">
-                    <ExternalLink size={14} style={{ marginRight: '4px' }} />
+                    <Map size={14} style={{ marginRight: '6px' }} />
                     Maps
                   </a>
                   <a href="https://www.waze.com/ul?q=Parking%20Indigo%20Clichy%20H%C3%B4tel%20de%20Ville" target="_blank" rel="noopener noreferrer" className="parking-link">
-                    <Navigation size={14} style={{ marginRight: '4px' }} />
+                    <Navigation size={14} style={{ marginRight: '6px' }} />
                     Waze
                   </a>
                 </div>
@@ -73,7 +82,7 @@ function GoogleMap() {
 
             <div className="location-footer">
               <div className="btn-group">
-                <a href="https://www.google.com/maps/place/Mairie+de+Clichy" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=48.902817,2.302299" target="_blank" rel="noopener noreferrer" className="btn-outline">
                   <Navigation size={18} style={{ marginRight: '8px' }} />
                   Itinéraire Mairie
                 </a>
@@ -116,10 +125,11 @@ function GoogleMap() {
                   allowFullScreen=""
                   loading="lazy"
                   title="Splash"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
 
-              {/* Nouveau Bloc Parking Splash */}
+              {/* Bloc Parking Splash */}
               <div className="parking-info">
                 <div className="parking-header">
                   <ParkingSquare size={20} />
@@ -129,11 +139,11 @@ function GoogleMap() {
                 <p className="parking-address">Entrée directe via le Port Van Gogh</p>
                 <div className="parking-actions">
                   <a href="https://www.google.com/maps/place/Port+Van+Gogh,+92600+Asni%C3%A8res-sur-Seine" target="_blank" rel="noopener noreferrer" className="parking-link">
-                    <ExternalLink size={14} style={{ marginRight: '4px' }} />
+                    <Map size={14} style={{ marginRight: '6px' }} />
                     Maps
                   </a>
-                  <a href="https://www.waze.com/ul?ll=48.91097,2.28152&navigate=yes" target="_blank" rel="noopener noreferrer" className="parking-link">
-                    <Navigation size={14} style={{ marginRight: '4px' }} />
+                  <a href="https://www.waze.com/ul?ll=48.911467,2.288258&navigate=yes" target="_blank" rel="noopener noreferrer" className="parking-link">
+                    <Navigation size={14} style={{ marginRight: '6px' }} />
                     Waze
                   </a>
                 </div>
@@ -142,7 +152,7 @@ function GoogleMap() {
 
             <div className="location-footer">
               <div className="btn-group">
-                <a href="https://www.google.com/maps/place/Chez+Monix+au+Splash" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=48.911467,2.288258" target="_blank" rel="noopener noreferrer" className="btn-outline">
                   <Navigation size={18} style={{ marginRight: '8px' }} />
                   Itinéraire Restaurant
                 </a>
@@ -151,6 +161,18 @@ function GoogleMap() {
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightboxOpen && (
+        <div className="location-lightbox-overlay" onClick={() => setLightboxOpen(false)}>
+          <button className="location-lightbox-close" onClick={() => setLightboxOpen(false)}>
+            <X size={32} />
+          </button>
+          <div className="location-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src="/mairie-clichy.jpg" alt="Mairie de Clichy" className="location-lightbox-image" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

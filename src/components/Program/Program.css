@@ -5,20 +5,6 @@
   position: relative;
 }
 
-/* Texture de fond très subtile */
-.program::before {
-  content: '♥';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40rem;
-  color: var(--rose-light);
-  opacity: 0.1;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .program-container {
   max-width: 900px;
   margin: 0 auto;

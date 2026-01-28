@@ -1,64 +1,239 @@
-/* RSVP Section - Design Épuré et Intuitif */
+/* RSVP Section - Formulaire Intégré Premium */
 .rsvp {
-  padding: 5rem 2rem;
-  background-color: var(--bg-light);
-  position: relative;
+  padding: 6rem 2rem;
+  background: var(--bg-light);
 }
 
 .rsvp-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .rsvp-description {
   text-align: center;
   font-family: 'Lora', serif;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-medium);
-  margin-bottom: 3rem;
-  line-height: 2;
+  margin-bottom: 4rem;
   font-style: italic;
-}
-
-.rsvp-form-container {
-  background: var(--white);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-color);
-  transition: var(--transition);
-}
-
-.rsvp-form-container:hover {
-  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
-}
-
-.rsvp-iframe {
-  border-radius: 4px;
-  min-height: 850px;
-  /* Masquer le fond gris par défaut du form si possible */
-}
-
-.rsvp-alternative {
-  text-align: center;
-  margin-top: 4rem;
-  color: var(--text-light);
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
 
-.rsvp-alternative a {
-  color: var(--rose-gold);
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-  border-bottom: 1px solid transparent;
+.rsvp-form-wrapper {
+  background: var(--white);
+  padding: 4rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
 }
 
-.rsvp-alternative a:hover {
-  border-bottom-color: var(--rose-gold);
+/* Grille du formulaire */
+.integrated-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* Labels */
+.form-group label {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 0.9rem;
   color: var(--text-dark);
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.required {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* Inputs & Textarea */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--rose-gold-light);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background: var(--bg-light);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio Group Premium */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  background: var(--white);
+  position: relative;
+}
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-label:hover {
+  border-color: var(--gold-light);
+  background: var(--bg-light);
+}
+
+.radio-label.active {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+/* Bouton Submit */
+.submit-btn {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 1.3rem;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(197, 160, 89, 0.25);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.rsvp-notice {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* État de Succès */
+.success-state {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-card {
+  text-align: center;
+  padding: 5rem 3rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  color: #2e7d32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  animation: successPulse 1.5s ease-in-out;
+}
+
+@keyframes successPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.success-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.success-text {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  color: var(--text-medium);
+  line-height: 1.8;
 }
 
 /* Responsive */
@@ -66,12 +241,33 @@
   .rsvp {
     padding: 4rem 1.5rem;
   }
-  
-  .rsvp-iframe {
-    min-height: 600px;
+
+  .rsvp-form-wrapper {
+    padding: 2.5rem 1.5rem;
   }
   
-  .rsvp-description {
-    margin-bottom: 3rem;
+  .integrated-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+
+  .radio-label {
+    min-width: unset;
+  }
+
+  .success-card {
+    padding: 3rem 2rem;
+  }
+
+  .success-title {
+    font-size: 2.8rem;
   }
 }

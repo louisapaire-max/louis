@@ -22,7 +22,7 @@ function Program() {
       icon: <MapPin size={16} />
     },
     {
-      time: "15h00",
+      time: "17h00",
       title: "Après-midi",
       location: "Activités",
       description: "Moments de détente et activités au choix pour conclure la journée.",
