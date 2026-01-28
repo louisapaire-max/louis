@@ -107,7 +107,7 @@
   .header {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(20px);
-    padding: 1rem 0;
+    padding: 0.6rem 0;
   }
 
   .nav-container {
@@ -115,15 +115,15 @@
   }
 
   .nav-logo {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .nav-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 4px;
   }
 

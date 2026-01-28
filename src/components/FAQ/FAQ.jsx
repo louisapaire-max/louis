@@ -7,6 +7,25 @@ function FAQ() {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.2 })
   const [openIndex, setOpenIndex] = useState(null)
 
+  const infoCards = [
+    {
+      title: "Transport & parking",
+      lines: [
+        "Métro : ligne 13 (Mairie de Clichy)",
+        "RER : ligne C (Asnières-sur-Seine) + 10 min à pied",
+        "Parking : Indigo Clichy Hôtel de Ville + parking du Splash"
+      ]
+    },
+    {
+      title: "Tenue conseillée",
+      text: "Élégante et confortable, adaptée à une journée de célébration et de balades."
+    },
+    {
+      title: "Cadeaux",
+      text: "Votre présence suffit. Une urne sera disponible sur place pour ceux qui souhaitent participer à notre voyage de noces."
+    }
+  ]
+
   const faqs = [
     {
       question: "Quel est le code vestimentaire ?",
@@ -53,6 +72,21 @@ function FAQ() {
         <p className="faq-intro">
           Détails complémentaires pour faciliter votre venue et l'organisation de cette journée.
         </p>
+        <div className="info-cards">
+          {infoCards.map((card) => (
+            <div key={card.title} className="info-card">
+              <h3 className="info-card-title">{card.title}</h3>
+              {card.text && <p className="info-card-text">{card.text}</p>}
+              {card.lines && (
+                <ul className="info-card-list">
+                  {card.lines.map((line) => (
+                    <li key={line}>{line}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
         <div className="faq-list">
           {faqs.map((faq, index) => (
             <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>

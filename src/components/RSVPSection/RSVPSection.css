@@ -27,6 +27,21 @@
   border: 1px solid var(--border-color);
 }
 
+.google-form-embed {
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+}
+
+.google-form-embed iframe {
+  width: 100%;
+  min-height: 900px;
+  border: 0;
+  display: block;
+}
+
 /* Grille du formulaire */
 .integrated-form .form-grid {
   display: grid;
@@ -66,6 +81,7 @@
   font-size: 0.8rem;
   font-style: italic;
 }
+
 
 /* Inputs & Textarea */
 .form-group input[type="text"],
@@ -142,6 +158,52 @@
   color: var(--white);
   border-color: var(--primary-color);
 }
+
+/* Tile Radio Group */
+.tile-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.tile-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.tile-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tile-option:hover {
+  border-color: var(--gold-light);
+  background: var(--bg-light);
+}
+
+.tile-option.active {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
+.tile-group.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 
 /* Bouton Submit */
 .submit-btn {
@@ -258,6 +320,11 @@
   .radio-group {
     flex-direction: column;
   }
+
+  .tile-group {
+    grid-template-columns: 1fr;
+  }
+
 
   .radio-label {
     min-width: unset;

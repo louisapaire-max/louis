@@ -86,6 +86,10 @@ function GoogleMap() {
                   <Navigation size={18} style={{ marginRight: '8px' }} />
                   Itinéraire Mairie
                 </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mairie%20de%20Clichy" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                  <Map size={18} style={{ marginRight: '8px' }} />
+                  Ouvrir dans Google Maps
+                </a>
               </div>
             </div>
           </div>
@@ -155,6 +159,10 @@ function GoogleMap() {
                 <a href="https://www.google.com/maps/dir/?api=1&destination=48.911467,2.288258" target="_blank" rel="noopener noreferrer" className="btn-outline">
                   <Navigation size={18} style={{ marginRight: '8px' }} />
                   Itinéraire Restaurant
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Splash%20Asni%C3%A8res-sur-Seine" target="_blank" rel="noopener noreferrer" className="btn-outline">
+                  <Map size={18} style={{ marginRight: '8px' }} />
+                  Ouvrir dans Google Maps
                 </a>
               </div>
             </div>
