@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { MapPin, Utensils, Map, X, Copy } from 'lucide-react'
+import ImageSlider from '../ImageSlider/ImageSlider'
 import './GoogleMap.css'
 
 const locations = [
@@ -26,6 +27,7 @@ const locations = [
     address: 'Port Van Gogh, 92600 Asnières-sur-Seine',
     time: 'À partir de 12h30',
     image: '/splash-1.jpg',
+    sliderImages: ['/splash-1.jpg', '/splash-2.jpg', '/splash-3.jpg', '/splash-4.jpg'],
     mapLink: 'https://www.google.com/maps/dir/?api=1&destination=48.911467,2.288258',
     mapLabel: 'Restaurant — Voir sur Google Maps',
     parking: {
@@ -81,13 +83,21 @@ function GoogleMap() {
               <div className="location-content-vertical">
                 <div
                   className="location-photo-box"
-                  onClick={() => openLightbox(location.image)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => e.key === 'Enter' && openLightbox(location.image)}
-                  aria-label="Agrandir l'image"
+                  onClick={location.sliderImages ? undefined : () => openLightbox(location.image)}
+                  role={location.sliderImages ? undefined : 'button'}
+                  tabIndex={location.sliderImages ? undefined : 0}
+                  onKeyDown={
+                    location.sliderImages
+                      ? undefined
+                      : (e) => e.key === 'Enter' && openLightbox(location.image)
+                  }
+                  aria-label={location.sliderImages ? undefined : "Agrandir l'image"}
                 >
-                  <img src={location.image} alt={location.name} className="location-image" />
+                  {location.sliderImages ? (
+                    <ImageSlider images={location.sliderImages} alt={location.name} />
+                  ) : (
+                    <img src={location.image} alt={location.name} className="location-image" />
+                  )}
                 </div>
 
                 <div className="mini-separator">
