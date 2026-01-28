@@ -24,15 +24,6 @@
   z-index: 1;
 }
 
-.location-section {
-  max-width: 800px;
-  margin: 0 auto 5rem auto;
-}
-
-.location-section:last-child {
-  margin-bottom: 0;
-}
-
 .location-card {
   background: var(--white);
   border-radius: var(--border-radius);
@@ -127,7 +118,7 @@
   overflow: hidden;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-md);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .location-image {
@@ -143,7 +134,7 @@
 
 /* Séparateur élégant */
 .mini-separator {
-  margin: 4rem 0;
+  margin: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,87 +148,100 @@
   padding: 0 2rem;
 }
 
-.location-map-box {
-  width: 100%;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-inner);
-  margin-bottom: 1.25rem;
-  /* filter: grayscale(0.2); */ /* Retiré pour une meilleure compatibilité */
-  transition: var(--transition);
-}
-
-.location-map-box:hover {
-  filter: grayscale(0);
-}
-
-/* Bloc Parking - Design "Conciergerie" */
-.parking-info {
-  background: var(--bg-light);
-  border-radius: var(--border-radius);
-  padding: 2.5rem;
-  margin-top: 4rem;
-  border-left: 3px solid var(--gold);
-  box-shadow: var(--shadow-sm);
-}
-
-.parking-header {
+.location-address-row {
   display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
   align-items: center;
-  gap: 1rem;
-  color: var(--gold);
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.location-address-label {
+  font-family: 'Lora', serif;
+  color: var(--text-dark);
+  font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
 }
 
-.parking-name {
+.location-address-text {
   font-family: 'Lora', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
-}
-
-.parking-address {
-  font-family: 'Lora', serif;
-  font-size: 1rem;
   color: var(--text-medium);
-  margin-bottom: 2rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
-.parking-actions {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.parking-link {
+.copy-icon-btn {
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  color: var(--text-dark);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
-  padding: 0.8rem 1.8rem;
-  background: var(--white);
-  border: 1px solid var(--border-color);
-  color: var(--text-dark);
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-family: 'Lora', serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  justify-content: center;
+  cursor: pointer;
   transition: var(--transition);
+}
+
+.copy-icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.location-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.location-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.75rem 1.6rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.location-button.primary {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
   box-shadow: var(--shadow-sm);
 }
 
-.parking-link:hover {
+.location-button.primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.location-button.secondary {
+  background: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+}
+
+.location-button.secondary:hover {
   border-color: var(--gold);
   color: var(--gold);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
+
 
 /* Footer & Boutons */
 
@@ -252,31 +256,8 @@
     margin-bottom: 2.5rem;
   }
 
-  .location-map-box {
-    margin-bottom: 1rem;
-  }
-
   .mini-separator {
     margin: 2rem 0;
-  }
-
-  .parking-info {
-    padding: 1.5rem;
-    margin-top: 2.5rem;
-  }
-
-  .parking-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-
-  .parking-link {
-    flex: 1;
-    min-width: 100px;
-    justify-content: center;
-    padding: 0.7rem 0.5rem;
-    font-size: 0.8rem;
   }
 
 }
