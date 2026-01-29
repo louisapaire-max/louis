@@ -33,7 +33,7 @@ function Program() {
   return (
     <section ref={ref} id="programme" className={`program scroll-section ${isVisible ? 'scroll-visible' : ''}`}>
       <div className="program-container">
-        <h2 className="section-title">Le Déroulement</h2>
+        <h2 className="section-title">Le Déroulé</h2>
         <p className="program-intro">Samedi 25 Avril 2026</p>
         
         <div className="program-timeline">

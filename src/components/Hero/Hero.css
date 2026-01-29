@@ -203,9 +203,9 @@
   border: 1px solid var(--border-color);
   border-radius: 4px;
   box-shadow: var(--shadow-md);
-  z-index: 100;
-  min-width: 180px;
-  overflow: hidden;
+  z-index: 1000;
+  min-width: 200px;
+  overflow: visible;
   animation: fadeInUp 0.2s ease-out;
 }
 

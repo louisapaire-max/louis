@@ -10,7 +10,10 @@ function RSVPSection() {
       <div className="rsvp-container">
         <h2 className="section-title">Confirmer Votre Présence</h2>
         <p className="rsvp-description">
-          Merci de nous faire part de votre réponse avant le 1er Avril 2026.
+          Merci de nous faire part de votre réponse avant le <strong>1er Mars 2026</strong>.
+        </p>
+        <p className="rsvp-info-box">
+          ℹ️ Célébration sans enfants — merci de votre compréhension.
         </p>
 
         <div className="rsvp-form-wrapper">

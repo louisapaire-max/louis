@@ -151,11 +151,12 @@
 .location-address-row {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
   text-align: center;
+  position: relative;
 }
 
 .location-address-label {
@@ -165,6 +166,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.address-with-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .location-address-text {

@@ -106,16 +106,18 @@ function GoogleMap() {
 
                 <div className="location-address-row">
                   <span className="location-address-label">{location.name}</span>
-                  <span className="location-address-text">{location.address}</span>
-                  <button
-                    type="button"
-                    className="copy-icon-btn"
-                    onClick={() => copyToClipboard(location.address)}
-                    aria-label="Copier l'adresse"
-                    title="Copier l'adresse"
-                  >
-                    <Copy size={16} />
-                  </button>
+                  <div className="address-with-copy">
+                    <span className="location-address-text">{location.address}</span>
+                    <button
+                      type="button"
+                      className="copy-icon-btn"
+                      onClick={() => copyToClipboard(location.address)}
+                      aria-label="Copier l'adresse"
+                      title="Copier l'adresse"
+                    >
+                      <Copy size={16} />
+                    </button>
+                  </div>
                 </div>
 
                 <div className="location-buttons">

@@ -33,7 +33,7 @@ function FAQ() {
     },
     {
       question: "Les enfants sont-ils conviés ?",
-      answer: "Les enfants sont les bienvenus. Nous vous prions de nous confirmer leur présence via le formulaire RSVP pour une organisation optimale."
+      answer: "Nous avons choisi de célébrer cette journée sans enfants afin que tous puissent profiter pleinement de cet événement. Merci de votre compréhension."
     },
     {
       question: "Stationnement à proximité",
@@ -41,7 +41,7 @@ function FAQ() {
     },
     {
       question: "Date limite de confirmation",
-      answer: "Nous vous remercions de bien vouloir confirmer votre présence via le formulaire en ligne avant le 1er avril 2026."
+      answer: "Nous vous remercions de bien vouloir confirmer votre présence via le formulaire en ligne avant le 1er mars 2026."
     },
     {
       question: "Options végétariennes",
