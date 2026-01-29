@@ -22,14 +22,12 @@
 .rsvp-info-box {
   text-align: center;
   font-family: 'Lora', serif;
-  font-size: 0.95rem;
-  color: var(--text-medium);
-  background: var(--champagne);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  margin: 0 auto 3rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 0;
+  margin: 0.5rem auto 2.5rem;
   max-width: 500px;
-  border-left: 3px solid var(--gold);
 }
 
 .rsvp-form-wrapper {
