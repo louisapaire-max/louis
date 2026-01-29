@@ -19,7 +19,7 @@ function RSVPSection() {
         <div className="rsvp-form-wrapper">
           <div className="google-form-embed">
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSeiY1XvyR4845m9vAOF4ohspGeD_OCeWxyRc_fb9QemJJ8xCg/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfu86lfjedMFO5DMIWLg6elwnxxNlh_Ik4k9SKDAoxmUtmtqw/viewform?embedded=true"
               title="Formulaire RSVP"
               loading="lazy"
               allowFullScreen
