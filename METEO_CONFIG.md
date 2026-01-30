@@ -2,7 +2,7 @@
 
 ## Fonctionnalités
 
-✅ **Météo actuelle** en temps réel pour Clichy
+✅ **Météo actuelle** en temps réel pour Clichy-la-Garenne
 ✅ **Prévisions sur 5 jours**
 ✅ **Animations modernes** selon les conditions météo
 ✅ **Design glassmorphism** avec effets de flou

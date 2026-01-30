@@ -13,7 +13,7 @@ function RSVPSection() {
           Merci de nous faire part de votre réponse avant le <strong>1er Mars 2026</strong>.
         </p>
         <p className="rsvp-info-box">
-          Célébration sans enfants — merci de votre compréhension.
+          Afin de permettre à chacun de profiter pleinement de la fête, nous avons souhaité une célébration entre adultes.
         </p>
 
         <div className="rsvp-form-wrapper">

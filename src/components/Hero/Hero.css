@@ -4,7 +4,7 @@
   background-color: var(--bg-light);
   /* Dégradé champagne très subtil */
   background-image: radial-gradient(circle at 70% 30%, rgba(197, 160, 89, 0.02) 0%, transparent 50%);
-  padding: 6rem 2rem;
+  padding: 4rem 2rem 3rem;
   overflow: hidden;
 }
 
@@ -79,7 +79,7 @@
   letter-spacing: 4px;
   color: var(--gold);
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   font-weight: 500;
   display: block;
 }
@@ -89,7 +89,7 @@
   font-size: 5.5rem;
   font-weight: 400;
   color: var(--text-dark);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1;
 }
 
@@ -104,15 +104,15 @@
   width: 40px;
   height: 1px;
   background: var(--gold);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   opacity: 0.6;
 }
 
 .hero-details {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 4rem;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 .hero-detail-item {
@@ -175,23 +175,32 @@
 .hero-cta-secondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.5rem;
-  background: transparent;
-  color: var(--text-medium);
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: var(--white);
+  color: var(--text-dark);
   border: 1px solid var(--border-color);
   font-family: 'Lora', serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   transition: var(--transition);
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
 }
 
 .hero-cta-secondary:hover {
   border-color: var(--gold);
   color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-cta-secondary {
+  animation: pulse-gold 3s infinite;
 }
 
 /* Menu déroulant calendrier */
@@ -207,6 +216,17 @@
   min-width: 200px;
   overflow: visible;
   animation: fadeInUp 0.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .calendar-menu a,

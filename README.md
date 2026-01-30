@@ -5,9 +5,10 @@ Site web élégant pour le mariage de Julie & Louis, créé avec React et Vite.
 ## Informations du mariage
 
 - **Date** : 25 avril 2025 à 11h
-- **Cérémonie** : Mairie de Clichy
+- **Cérémonie** : Mairie de Clichy-la-Garenne
 - **Repas** : Splash Port Van Gogh (à partir de 12h)
 - **Activités** : Après-midi avec choix de préférence
+- **Date** : 25 avril 2026 à 11h
 
 ## Fonctionnalités
 
@@ -15,7 +16,7 @@ Site web élégant pour le mariage de Julie & Louis, créé avec React et Vite.
 - ✅ Programme détaillé de la journée
 - ✅ Intégration Google Form pour RSVP (participation, allergies, halal, conditions alimentaires, préférences d'activités)
 - ✅ Cartes Google Maps pour les deux lieux
-- ✅ Affichage de la météo à Clichy
+- ✅ Affichage de la météo à Clichy-la-Garenne
 - ✅ Design responsive et moderne
 - ✅ Animations subtiles
 
@@ -54,7 +55,7 @@ Pour obtenir l'URL d'intégration de votre Google Form :
 
 ## Configuration Météo
 
-Le composant météo affiche les conditions météorologiques à Clichy. Par défaut, il utilise des données de démonstration. Pour utiliser des données réelles :
+Le composant météo affiche les conditions météorologiques à Clichy-la-Garenne. Par défaut, il utilise des données de démonstration. Pour utiliser des données réelles :
 
 1. Créez un compte gratuit sur [OpenWeatherMap](https://openweathermap.org/api)
 2. Obtenez votre clé API

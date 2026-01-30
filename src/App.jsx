@@ -10,7 +10,7 @@ import {
   FAQ,
   Weather,
   Footer,
-  ScrollToTop
+  FloatingRSVP
 } from './components'
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <SectionDivider />
       <Weather />
       <Footer />
-      <ScrollToTop />
+      <FloatingRSVP />
     </div>
   )
 }

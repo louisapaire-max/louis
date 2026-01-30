@@ -1,6 +1,6 @@
 /* Program Section - Raffinement et Clarté */
 .program {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   background: var(--white);
   position: relative;
 }
@@ -29,7 +29,7 @@
   color: var(--text-light);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   font-weight: 500;
 }
 

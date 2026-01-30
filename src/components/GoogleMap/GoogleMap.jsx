@@ -7,15 +7,15 @@ const locations = [
   {
     icon: <MapPin size={24} />,
     label: 'La Cérémonie Civile',
-    name: 'Mairie de Clichy',
-    address: '80 Boulevard Jean Jaurès, 92110 Clichy',
+    name: 'Mairie de Clichy-la-Garenne',
+    address: '80 Boulevard Jean Jaurès, 92110 Clichy-la-Garenne',
     time: '25 Avril 2026 à 11h00',
     image: '/mairie-clichy.jpg',
     mapLink: 'https://www.google.com/maps/dir/?api=1&destination=48.902817,2.302299',
     mapLabel: 'Mairie — Voir sur Google Maps',
     parking: {
       name: 'Parking Indigo Clichy Hôtel de Ville',
-      address: '80 Boulevard Jean Jaurès, 92110 Clichy',
+      address: '80 Boulevard Jean Jaurès, 92110 Clichy-la-Garenne',
       map: 'https://www.google.com/maps/search/Parking+Indigo+Clichy+H%C3%B4tel+de+Ville',
       mapLabel: 'Parking conseillé (Indigo) — Voir sur Google Maps'
     }
@@ -26,8 +26,8 @@ const locations = [
     name: 'Splash',
     address: 'Port Van Gogh, 92600 Asnières-sur-Seine',
     time: 'À partir de 12h30',
-    image: '/splash-1.jpg',
-    sliderImages: ['/splash-1.jpg', '/splash-2.jpg', '/splash-3.jpg', '/splash-4.jpg'],
+    image: '/splash-2.jpg',
+    sliderImages: ['/splash-2.jpg', '/splash-3.jpg', '/splash-4.jpg', '/splash-1.jpg'],
     mapLink: 'https://www.google.com/maps/dir/?api=1&destination=48.911467,2.288258',
     mapLabel: 'Restaurant — Voir sur Google Maps',
     parking: {
@@ -40,9 +40,6 @@ const locations = [
 ]
 
 function GoogleMap() {
-  const [lightboxOpen, setLightboxOpen] = useState(false)
-  const [lightboxImage, setLightboxImage] = useState(locations[0].image)
-
   const copyToClipboard = async (text) => {
     try {
       await navigator.clipboard.writeText(text)
@@ -57,11 +54,6 @@ function GoogleMap() {
       document.execCommand('copy')
       document.body.removeChild(textarea)
     }
-  }
-
-  const openLightbox = (src) => {
-    setLightboxImage(src)
-    setLightboxOpen(true)
   }
 
   return (
@@ -81,18 +73,7 @@ function GoogleMap() {
               </div>
 
               <div className="location-content-vertical">
-                <div
-                  className="location-photo-box"
-                  onClick={location.sliderImages ? undefined : () => openLightbox(location.image)}
-                  role={location.sliderImages ? undefined : 'button'}
-                  tabIndex={location.sliderImages ? undefined : 0}
-                  onKeyDown={
-                    location.sliderImages
-                      ? undefined
-                      : (e) => e.key === 'Enter' && openLightbox(location.image)
-                  }
-                  aria-label={location.sliderImages ? undefined : "Agrandir l'image"}
-                >
+                <div className="location-photo-box">
                   {location.sliderImages ? (
                     <ImageSlider images={location.sliderImages} alt={location.name} />
                   ) : (
@@ -147,17 +128,6 @@ function GoogleMap() {
           </div>
         ))}
       </div>
-
-      {lightboxOpen && (
-        <div className="location-lightbox-overlay" onClick={() => setLightboxOpen(false)}>
-          <button className="location-lightbox-close" onClick={() => setLightboxOpen(false)}>
-            <X size={32} />
-          </button>
-          <div className="location-lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img src={lightboxImage} alt="Lieu" className="location-lightbox-image" />
-          </div>
-        </div>
-      )}
     </section>
   )
 }

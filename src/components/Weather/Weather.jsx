@@ -43,7 +43,7 @@ function Weather() {
 
         {/* Section Historique */}
         <div className="weather-history">
-          <h3 className="history-title">Relevés historiques à Clichy</h3>
+          <h3 className="history-title">Relevés historiques à Clichy-la-Garenne</h3>
           <div className="history-grid">
             {historicalData.map((item, index) => (
               <div key={index} className="history-card">
@@ -56,9 +56,8 @@ function Weather() {
           </div>
         </div>
 
-        <p className="weather-note">
-          <Lightbulb size={18} style={{ marginRight: '8px', verticalAlign: 'text-bottom', color: 'var(--gold)' }} />
-          Note : Une tenue adaptée aux températures printanières en soirée est conseillée.
+        <p className="weather-disclaimer">
+          Données basées sur les moyennes historiques pour la période du 25 avril.
         </p>
       </div>
     </section>

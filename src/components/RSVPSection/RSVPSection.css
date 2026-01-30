@@ -1,6 +1,6 @@
 /* RSVP Section - Formulaire Intégré Premium */
 .rsvp {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   background: var(--bg-light);
 }
 
@@ -14,7 +14,7 @@
   font-family: 'Lora', serif;
   font-size: 1.15rem;
   color: var(--text-medium);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
   letter-spacing: 0.5px;
 }
@@ -26,13 +26,13 @@
   color: var(--text-light);
   font-style: italic;
   padding: 0;
-  margin: 0.5rem auto 2.5rem;
+  margin: 0.5rem auto 2rem;
   max-width: 500px;
 }
 
 .rsvp-form-wrapper {
   background: var(--white);
-  padding: 4rem;
+  padding: 3rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
@@ -48,7 +48,7 @@
 
 .google-form-embed iframe {
   width: 100%;
-  min-height: 900px;
+  min-height: 1200px;
   border: 0;
   display: block;
 }
@@ -317,6 +317,10 @@
 
   .rsvp-form-wrapper {
     padding: 2.5rem 1.5rem;
+  }
+  
+  .google-form-embed iframe {
+    min-height: 1600px;
   }
   
   .integrated-form .form-grid {

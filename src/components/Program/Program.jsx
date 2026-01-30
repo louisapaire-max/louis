@@ -10,7 +10,7 @@ function Program() {
     {
       time: "11h00",
       title: "Cérémonie Civile",
-      location: "Hôtel de Ville de Clichy",
+      location: "Hôtel de Ville de Clichy-la-Garenne",
       description: "Célébration officielle de notre union en présence de nos proches.",
       icon: <MapPin size={16} />
     },

@@ -11,18 +11,18 @@ function FAQ() {
     {
       title: "Transport & parking",
       lines: [
-        "Métro : ligne 13 (Mairie de Clichy)",
+        "Métro : ligne 13 (Mairie de Clichy-la-Garenne)",
         "RER : ligne C (Asnières-sur-Seine) + 10 min à pied",
         "Parking : Indigo Clichy Hôtel de Ville + parking du Splash"
       ]
     },
     {
       title: "Tenue conseillée",
-      text: "Élégante et confortable, adaptée à une journée de célébration et de balades."
+      text: "Élégante et confortable, adaptée à une journée de célébration."
     },
     {
       title: "Cadeaux",
-      text: "Votre présence suffit. Une urne sera disponible sur place pour ceux qui souhaitent participer à notre voyage de noces."
+      text: "Votre présence suffit. Une boîte à messages et à attentions sera disponible sur place pour ceux qui souhaitent participer à notre voyage de noces."
     }
   ]
 
@@ -33,11 +33,11 @@ function FAQ() {
     },
     {
       question: "Les enfants sont-ils conviés ?",
-      answer: "Nous avons choisi de célébrer cette journée sans enfants afin que tous puissent profiter pleinement de cet événement. Merci de votre compréhension."
+      answer: "Afin de permettre à chacun de profiter pleinement de la fête, nous avons choisi de célébrer cette journée entre adultes. Nous vous remercions de votre délicate attention à ce sujet."
     },
     {
       question: "Stationnement à proximité",
-      answer: "Des parkings sont disponibles à proximité de l'Hôtel de Ville de Clichy ainsi qu'au restaurant Splash. Les détails et itinéraires sont consultables dans la section 'Lieux'."
+      answer: "Des parkings sont disponibles à proximité de l'Hôtel de Ville de Clichy-la-Garenne ainsi qu'au restaurant Splash. Les détails et itinéraires sont consultables dans la section 'Lieux'."
     },
     {
       question: "Date limite de confirmation",
@@ -53,11 +53,11 @@ function FAQ() {
     },
     {
       question: "Liste de mariage",
-      answer: "Votre présence à nos côtés est notre plus beau présent. Pour ceux qui souhaitent nous témoigner une attention particulière, une contribution à notre voyage de noces sera possible via une urne sur place."
+      answer: "Votre présence à nos côtés est notre plus beau présent. Pour ceux qui souhaitent nous témoigner une attention particulière, une boîte à attentions sera mise à votre disposition lors de la réception."
     },
     {
       question: "Organisation de la journée",
-      answer: "La cérémonie civile débutera à 11h à l'Hôtel de Ville de Clichy. Elle sera suivie d'une réception au Splash à partir de 12h30. L'après-midi sera agrémenté d'activités au choix."
+      answer: "La cérémonie civile débutera à 11h à l'Hôtel de Ville de Clichy-la-Garenne. Elle sera suivie d'une réception au Splash à partir de 12h30. L'après-midi sera agrémenté d'activités au choix."
     }
   ]
 
