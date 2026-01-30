@@ -258,6 +258,39 @@
   font-style: italic;
 }
 
+.rsvp-contact {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-family: 'Lora', serif;
+}
+
+.rsvp-contact p {
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.rsvp-contact-phones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.rsvp-contact-phones strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.rsvp-contact-phones .separator {
+  color: var(--gold-light);
+  opacity: 0.5;
+}
+
 /* État de Succès */
 .success-state {
   min-height: 60vh;
@@ -351,5 +384,14 @@
 
   .success-title {
     font-size: 2.8rem;
+  }
+
+  .rsvp-contact-phones {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .rsvp-contact-phones .separator {
+    display: none;
   }
 }

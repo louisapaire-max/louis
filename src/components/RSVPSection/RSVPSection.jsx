@@ -32,6 +32,15 @@ function RSVPSection() {
         <p className="rsvp-notice">
           Vos données sont uniquement utilisées pour l'organisation de notre mariage et ne seront pas partagées.
         </p>
+
+        <div className="rsvp-contact">
+          <p>Une question ? Contactez-nous :</p>
+          <div className="rsvp-contact-phones">
+            <span><strong>Louis :</strong> 07 59 66 40 39</span>
+            <span className="separator">•</span>
+            <span><strong>Julie :</strong> 06 25 91 26 78</span>
+          </div>
+        </div>
       </div>
     </section>
   )
