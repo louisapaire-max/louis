@@ -32,48 +32,13 @@
 }
 
 .nav-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: var(--text-dark);
   text-decoration: none;
   transition: var(--transition);
   position: relative;
   z-index: 1001;
-  color: var(--text-dark);
-}
-
-.logo-content {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.logo-heart {
-  color: var(--gold);
-  opacity: 0.8;
-  transition: var(--transition);
-}
-
-.nav-logo:hover .logo-heart {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.logo-text-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-names {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.logo-date {
-  font-family: 'Lora', serif;
-  font-size: 0.65rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 2px;
 }
 
 .nav-logo:hover {
@@ -150,15 +115,7 @@
   }
 
   .nav-logo {
-    font-size: 1.5rem;
-  }
-
-  .logo-names {
-    font-size: 1.4rem;
-  }
-
-  .logo-date {
-    font-size: 0.55rem;
+    font-size: 1.7rem;
   }
 
   .nav-toggle {

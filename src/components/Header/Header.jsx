@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Heart } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useScrollSpy } from '../../hooks/useScrollSpy'
 import './Header.css'
 
@@ -45,13 +45,7 @@ function Header() {
             className={`nav-logo ${!activeSection || activeSection === 'accueil' ? 'active' : ''}`}
             onClick={closeMenu}
           >
-            <div className="logo-content">
-              <Heart size={20} className="logo-heart" fill="currentColor" />
-              <div className="logo-text-wrapper">
-                <span className="logo-names">Julie & Louis</span>
-                <span className="logo-date">25 Avril 2026</span>
-              </div>
-            </div>
+            Julie & Louis
           </a>
           <button 
             className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
