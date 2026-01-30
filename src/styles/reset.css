@@ -71,3 +71,27 @@ img {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* Désactiver le clic automatique sur les adresses et téléphones (Safari/iOS) */
+address, 
+.location-address, 
+.location-address-text, 
+.hero-detail-item p,
+.program-location {
+  pointer-events: text; /* Permet la sélection mais pas le clic lien */
+  cursor: default;
+  text-decoration: none;
+}
+
+[href^="tel:"],
+[href^="mailto:"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Exception pour nos boutons d'action explicites */
+.contact-actions a,
+.location-buttons a {
+  pointer-events: auto;
+  cursor: pointer;
+}
