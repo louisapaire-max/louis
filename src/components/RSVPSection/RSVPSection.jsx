@@ -1,4 +1,5 @@
 import React from 'react'
+import { Phone } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import './RSVPSection.css'
 
@@ -36,9 +37,19 @@ function RSVPSection() {
         <div className="rsvp-contact">
           <p>Une question ? Contactez-nous :</p>
           <div className="rsvp-contact-phones">
-            <span><strong>Louis :</strong> 07 59 66 40 39</span>
+            <div className="contact-item">
+              <span><strong>Louis :</strong> 07 59 66 40 39</span>
+              <a href="tel:0759664039" className="call-btn" title="Appeler Louis">
+                <Phone size={14} />
+              </a>
+            </div>
             <span className="separator">•</span>
-            <span><strong>Julie :</strong> 06 25 91 26 78</span>
+            <div className="contact-item">
+              <span><strong>Julie :</strong> 06 25 91 26 78</span>
+              <a href="tel:0625912678" className="call-btn" title="Appeler Julie">
+                <Phone size={14} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
