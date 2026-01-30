@@ -55,10 +55,6 @@ function Weather() {
             ))}
           </div>
         </div>
-
-        <p className="weather-disclaimer">
-          Données basées sur les moyennes historiques pour la période du 25 avril.
-        </p>
       </div>
     </section>
   )
