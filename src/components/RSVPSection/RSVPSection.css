@@ -287,25 +287,47 @@
   gap: 0.8rem;
 }
 
-.call-btn {
+.contact-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
   background: var(--bg-light);
-  color: var(--gold);
   border: 1px solid var(--gold-light);
   border-radius: 50%;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
-.call-btn:hover {
+.contact-btn.call {
+  color: var(--gold);
+}
+
+.contact-btn.whatsapp {
+  color: #25D366; /* Couleur officielle WhatsApp */
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-btn.call:hover {
   background: var(--gold);
   color: var(--white);
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.2);
+  border-color: var(--gold);
+}
+
+.contact-btn.whatsapp:hover {
+  background: #25D366;
+  color: var(--white);
+  border-color: #25D366;
 }
 
 .rsvp-contact-phones strong {

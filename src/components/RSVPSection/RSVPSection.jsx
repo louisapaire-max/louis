@@ -1,5 +1,5 @@
 import React from 'react'
-import { Phone } from 'lucide-react'
+import { Phone, MessageCircle } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import './RSVPSection.css'
 
@@ -39,16 +39,26 @@ function RSVPSection() {
           <div className="rsvp-contact-phones">
             <div className="contact-item">
               <span><strong>Louis :</strong> 07 59 66 40 39</span>
-              <a href="tel:0759664039" className="call-btn" title="Appeler Louis">
-                <Phone size={14} />
-              </a>
+              <div className="contact-actions">
+                <a href="tel:0759664039" className="contact-btn call" title="Appeler Louis">
+                  <Phone size={14} />
+                </a>
+                <a href="https://wa.me/33759664039" target="_blank" rel="noopener noreferrer" className="contact-btn whatsapp" title="Message WhatsApp à Louis">
+                  <MessageCircle size={14} />
+                </a>
+              </div>
             </div>
             <span className="separator">•</span>
             <div className="contact-item">
               <span><strong>Julie :</strong> 06 25 91 26 78</span>
-              <a href="tel:0625912678" className="call-btn" title="Appeler Julie">
-                <Phone size={14} />
-              </a>
+              <div className="contact-actions">
+                <a href="tel:0625912678" className="contact-btn call" title="Appeler Julie">
+                  <Phone size={14} />
+                </a>
+                <a href="https://wa.me/33625912678" target="_blank" rel="noopener noreferrer" className="contact-btn whatsapp" title="Message WhatsApp à Julie">
+                  <MessageCircle size={14} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
