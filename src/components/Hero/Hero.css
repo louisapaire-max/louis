@@ -4,7 +4,7 @@
   background-color: var(--bg-light);
   /* Dégradé champagne très subtil */
   background-image: radial-gradient(circle at 70% 30%, rgba(197, 160, 89, 0.02) 0%, transparent 50%);
-  padding: 4rem 2rem 3rem;
+  padding: 3rem 2rem 2rem;
   overflow: hidden;
 }
 
@@ -111,8 +111,8 @@
 .hero-details {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-bottom: 3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .hero-detail-item {

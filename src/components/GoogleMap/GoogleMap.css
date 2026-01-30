@@ -1,6 +1,6 @@
 /* GoogleMap Section - Design Invitation de Luxe */
 .google-map {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   background-color: var(--bg-light);
   /* Trame de fond discrète */
   background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
