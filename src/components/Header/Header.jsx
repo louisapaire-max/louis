@@ -36,6 +36,15 @@ function Header() {
     }
   }, [])
 
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav">
@@ -60,6 +69,7 @@ function Header() {
               <a 
                 href="#programme" 
                 className={activeSection === 'programme' ? 'active' : ''}
+                aria-current={activeSection === 'programme' ? 'page' : undefined}
                 onClick={closeMenu}
               >
                 Le Programme
@@ -69,6 +79,7 @@ function Header() {
               <a 
                 href="#lieux" 
                 className={activeSection === 'lieux' ? 'active' : ''}
+                aria-current={activeSection === 'lieux' ? 'page' : undefined}
                 onClick={closeMenu}
               >
                 Les Lieux
@@ -78,6 +89,7 @@ function Header() {
               <a 
                 href="#rsvp" 
                 className={activeSection === 'rsvp' ? 'active' : ''}
+                aria-current={activeSection === 'rsvp' ? 'page' : undefined}
                 onClick={closeMenu}
               >
                 Répondre
@@ -87,12 +99,19 @@ function Header() {
               <a 
                 href="#faq" 
                 className={activeSection === 'faq' ? 'active' : ''}
+                aria-current={activeSection === 'faq' ? 'page' : undefined}
                 onClick={closeMenu}
               >
                 Informations
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            className={`nav-overlay ${isMenuOpen ? 'active' : ''}`}
+            onClick={closeMenu}
+            aria-label="Fermer le menu"
+          />
         </div>
       </nav>
     </header>

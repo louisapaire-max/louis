@@ -52,6 +52,10 @@
   align-items: center;
 }
 
+.nav-overlay {
+  display: none;
+}
+
 .nav-menu a {
   font-family: 'Lora', serif;
   color: var(--text-medium);
@@ -177,13 +181,20 @@
     color: var(--gold);
   }
 
-  /* Overlay derrière le menu */
-  .nav-menu.active::before {
-    content: '';
+  .nav-overlay {
+    display: block;
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 

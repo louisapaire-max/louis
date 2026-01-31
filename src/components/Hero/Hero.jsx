@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Calendar, MapPin, X, CalendarPlus } from 'lucide-react'
 import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import './Hero.css'
@@ -6,6 +6,7 @@ import './Hero.css'
 function Hero() {
   const [ref, isVisible] = useScrollAnimation({ threshold: 0.1 })
   const [calendarMenuOpen, setCalendarMenuOpen] = useState(false)
+  const calendarRef = useRef(null)
 
   // Google Calendar link
   const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mariage%20Julie%20%26%20Louis&dates=20260425T090000Z/20260425T200000Z&details=C%C3%A9r%C3%A9monie%20civile%20%C3%A0%2011h%20%C3%A0%20la%20Mairie%20de%20Clichy-la-Garenne%2C%20puis%20r%C3%A9ception%20au%20Splash.&location=Mairie%20de%20Clichy-la-Garenne%2C%2080%20Boulevard%20Jean%20Jaur%C3%A8s%2C%2092110%20Clichy-la-Garenne`
@@ -37,6 +38,26 @@ END:VCALENDAR`
     URL.revokeObjectURL(url)
     setCalendarMenuOpen(false)
   }
+
+  useEffect(() => {
+    if (!calendarMenuOpen) return
+    const handleOutsideClick = (event) => {
+      if (calendarRef.current && !calendarRef.current.contains(event.target)) {
+        setCalendarMenuOpen(false)
+      }
+    }
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') {
+        setCalendarMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleOutsideClick)
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [calendarMenuOpen])
 
   return (
     <>
@@ -72,18 +93,20 @@ END:VCALENDAR`
                 </div>
 
                 <div className="hero-buttons">
-                  <div className="calendar-dropdown">
-                    <button 
+                  <div className="calendar-dropdown" ref={calendarRef}>
+                    <button
+                      type="button"
                       className="hero-cta-secondary"
                       onClick={() => setCalendarMenuOpen(!calendarMenuOpen)}
                       aria-expanded={calendarMenuOpen}
+                      aria-controls="calendar-menu"
                     >
                       <CalendarPlus size={18} />
                       Ajouter au calendrier
                     </button>
                     
                     {calendarMenuOpen && (
-                      <div className="calendar-menu">
+                      <div className="calendar-menu" id="calendar-menu">
                         <a 
                           href={googleCalendarUrl} 
                           target="_blank" 
